@@ -29,6 +29,7 @@ class MeuAdapter(private val dataList: MutableList<Lista>) : RecyclerView.Adapte
         val nomes = "Nome do Time  ${data.time}Nome do Jogador  ${data.nome}"
         usernometimeTextView.text = nomes
 
+     // config usando a lib para da o get na imagem
         Picasso.get().load(data.foto).into(userAvatarImgView)
         holder.itemView.setOnClickListener {
             Toast.makeText(contex, nomes, Toast.LENGTH_SHORT).show()
